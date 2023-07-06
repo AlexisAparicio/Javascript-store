@@ -1,10 +1,10 @@
 import React from 'react';
 import './TodoCounter.css';
 
-function TodoList(props){
+function TodoList({children}){
     return(
         <section>
-            {props.children}
+            {children}
         </section>
     
     );

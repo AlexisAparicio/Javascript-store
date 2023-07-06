@@ -7,8 +7,10 @@ function TodoItem(props){
             <span>C</span>
                 <p>{props.text}</p>
                 <span>X</span>
+                {props.completed}
         </li>
-    );
+
+);
 }
 
 export  {TodoItem};
