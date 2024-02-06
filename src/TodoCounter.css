@@ -1,24 +1,158 @@
 .TodoCounter{
-    color:black;
+    color:#333C4B;
     text-align: center;
-    background-color: aqua;
+    width: 327px;
+    height: 58px;
+    border:24px;
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.TodoCounter span{
+    font-weight: bold;
+}
+
+.TdBoton{
+    background-color: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250,0.5);
+    border:none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    transform: rotate(0);
+    transition: .3s ease ;
+    flex-shrink: 0;
+    
+}
+
+.TdBoton:hover{
+    transform: rotate(224deg);
 }
 
 .Search{
-    padding: 10px,10px,10px,10px;
-    margin: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    display: block;
-    align-items: center;
-    text-align: center;
+  background: #F9FBFC;
+  border-radius: 2px;
+  border: 2px solid #202329;
+  margin: 0 24px;
+  height: 64px;
+  width: calc(100% - 62px);
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #1e1e1f;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
 }
 
-.glass-effect{
-    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 80px 32px 0 rgba(0,0,0,0.18);
-    border-radius: 32px;
+.Search::placeholder{
+    color:#a5a5a5;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.Search:focus{
+ outline-color: #61DAFA;
+}
+
+.TodoBlock{
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    margin: 2px;
+    border: 2px;
+    background:#fff;
+    box-shadow: 0px 5px 50px 0px rgba(32, 35, 41, 0.15);
+    border-radius: 2px;
+    width: 327px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.TodoBlockX{
+    color:black;
+    display: flex;
+    align-items: flex-end;
+    text-align: end;
+    width: 24px;
+    height: 24px;
+    border: 12px;
+    flex-shrink: 0;
+}
+.TodoBlockM{
+    color:black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 12px;
+    margin: 20px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    flex-shrink: 0;
+}
+
+.TodoBlockY{
+    color:black;
+    display: flex;
+    align-items: center;
+    border: 12px;
+    text-align: start;
+}
+
+.TodoBlockM--complete{
+    text-decoration: line-through;
+    color: #94A3B3;
+}
+
+.Icon{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Icon-check{
+    position: absolute;
+    left: 12px;
+}
+
+.Icon-check--active{
+    color: #61DAFB;
+}
+
+.Icon-delete{
+    position: relative;
+    right: 0;
+
+}
+
+.Icon-delete:hover{
+    color:red;
+}
+
+.Board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 24px;
+    margin-bottom: 80px;
 }

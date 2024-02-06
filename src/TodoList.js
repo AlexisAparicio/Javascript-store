@@ -1,9 +1,9 @@
 import React from 'react';
-import './TodoCounter.css';
+import './TodoList.css';
 
 function TodoList({children}){
     return(
-        <section>
+        <section className="Board">
             {children}
         </section>
     

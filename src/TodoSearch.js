@@ -1,9 +1,13 @@
 import React from 'react';
 import './TodoCounter.css';
 
-function TodoSearch(){
+function TodoSearch({SearchValue,setSearchValue}){
+    
     return(
-        < input className='Search' placeholder="Cebolla" />
+        < input className='Search' placeholder="Cebolla" value={SearchValue} onChange={(event)=>{
+            setSearchValue(event.target.value);
+        
+        }} />
     );
 }
 

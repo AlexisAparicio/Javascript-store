@@ -1,8 +1,9 @@
 import React from 'react';
+import './TodoCounter.css';
 
 function CreateTodoButton(){
     return(
-        <button>+</button>
+        <button class="TdBoton" onClick={()=>console.log("le diste click")} >+</button>
     );
 }
 
