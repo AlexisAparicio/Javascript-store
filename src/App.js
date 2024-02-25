@@ -10,7 +10,7 @@ const Dftodos=[
   { text: 'tomar el curso intro React', completed:false},
   { text: 'llorar con la llorona', completed:false},
   { text: 'Estudiar mas', completed:false},
-  { text: 'Aprender Japones', completed:true},
+  { text: 'Aprender Japones', completed:false},
 ];
 
 function App() {

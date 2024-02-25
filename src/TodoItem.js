@@ -1,13 +1,21 @@
 import React from 'react';
+import {CompleteIcon} from './CompleteIcon';
+import {DeleteIcon} from './DeleteIcon';
 import './TodoCounter.css';
 
 function TodoItem(props){
     return(
         <li className="TodoBlock">
-            <span className={`Icon Icon-check ${props.completed && "Icon-check--completed"}`} onClick={props.onComplete}>✅</span>
-                <p className={`TodoBlockM ${props.completed && "TodoBlockM--complete"}`}>{props.text}</p>
-                <span className="Icon Icon-delete" onClick={props.onDelete} >❌</span>
-                {props.completed}
+        <CompleteIcon
+        completed={props.completed}
+        onComplete={props.complete}
+        />
+
+        <p className={`TodoBlockM ${props.completed && "TodoBlockM--complete"}`}>{props.text}
+        </p>
+        <DeleteIcon
+        onDelete={props.onDelete}
+            />
         </li>
 
 );
