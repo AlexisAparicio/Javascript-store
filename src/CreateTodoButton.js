@@ -3,7 +3,7 @@ import './TodoCounter.css';
 
 function CreateTodoButton(){
     return(
-        <button class="TdBoton" onClick={()=>console.log("le diste click")} >+</button>
+        <button className="TdBoton" onClick={()=>console.log("le diste click")} >+</button>
     );
 }
 

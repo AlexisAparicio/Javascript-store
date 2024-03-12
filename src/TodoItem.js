@@ -8,14 +8,14 @@ function TodoItem(props){
         <li className="TodoBlock">
         <CompleteIcon
         completed={props.completed}
-        onComplete={props.complete}
+        onComplete={props.onComplete}
         />
 
         <p className={`TodoBlockM ${props.completed && "TodoBlockM--complete"}`}>{props.text}
         </p>
         <DeleteIcon
         onDelete={props.onDelete}
-            />
+        />
         </li>
 
 );
