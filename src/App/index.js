@@ -1,20 +1,6 @@
 import React from 'react';
-import {TodoCounter} from '../TodoCounter';
-import {TodoSearch} from '../TodoSearch';
-import {TodoList} from '../TodoList';
-import {TodoItem} from '../TodoItem';
-import {CreateTodoButton} from '../CreateTodoButton';
+import {AppUI} from './AppUI';
 import {useLocalStorage} from './useLocalStorage';
-
-// const Dftodos=[
-//   { text: 'cortar cebolla', completed:true},
-//   { text: 'tomar el curso intro React', completed:false},
-//   { text: 'llorar con la llorona', completed:false},
-//   { text: 'Estudiar mas', completed:false},
-//   { text: 'Aprender Japones', completed:false},
-// ];
-// localStorage.setItem('TODOS_V1',JSON.stringify(Dftodos);
-// localStorage.removeItem('TODOS_VI');
 
 function App() {  
   const [todos,saveTodos]= useLocalStorage('TODOS_V1',[]);
@@ -43,30 +29,17 @@ function App() {
     newTodos.splice(TodoIndex,1);
     saveTodos(newTodos);
   }
-  return (
-    <React.Fragment>
-    <TodoCounter completed={completedTodos} total={totalTodos}/>
-
-    <TodoSearch
-    searchValue={SearchValue}
-    setSearchValue={setSearchValue}
-    />
-
-
-    <TodoList>
-      {searchedTodos.map(todo =>(<TodoItem 
-      key={todo.text} 
-      text={todo.text} 
-      completed={todo.completed}
-      onComplete={()=>completeTodo(todo.text)}
-      onDelete={()=>deleteTodo(todo.text)}
-      />))}
+  return(
+    <AppUI
+        setSearchValue={setSearchValue}
+        completeTodo={completeTodo}
+        totalTodos={totalTodos}
+        searchedTodos={searchedTodos}
+        SearchValue={SearchValue}
+        deleteTodo={deleteTodo}
+        completedTodos={completedTodos}
       
-    <TodoItem />
-      </TodoList>
-
-    <CreateTodoButton />
-    </React.Fragment>
+    />
   );
 }
 
